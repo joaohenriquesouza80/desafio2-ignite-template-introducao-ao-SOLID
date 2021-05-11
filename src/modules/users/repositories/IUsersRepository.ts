@@ -6,7 +6,7 @@ interface ICreateUserDTO {
 }
 
 interface IUsersRepository {
-  create({ name, email }: ICreateUserDTO): User;
+  create(data: ICreateUserDTO): User;
   findById(id: string): User | undefined;
   findByEmail(email: string): User | undefined;
   turnAdmin(user: User): User;
